@@ -4,7 +4,7 @@
 #pragma region Shell
 #pragma section(".text")
 __declspec(allocate(".text"))
-__int8 shell[] = { 0x1E /* push cs?*/ };
+__int8 shell[] = { 0x1E /*pop ds (bad)*/ };
 #pragma endregion Shell
 #define DBVM_TRAP()  __try \
 {                                                               \
